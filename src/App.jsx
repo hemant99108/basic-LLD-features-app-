@@ -6,6 +6,7 @@ import Team from "./components/Team";
 import Login from "./components/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useState } from "react";
+import Accordion from './components/Accordion';
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -17,6 +18,7 @@ function App() {
         <nav className="p-2 m-2 flex justify-between w-96 text-lg">
           <a href="/">Home</a>
           <a href="/about">about</a>
+          <a href="/accordion">Accordion</a>
           <a href="/team">Teams</a>
           <a href="/login">login</a>
         </nav>
@@ -41,6 +43,9 @@ function App() {
             <Route path="/about" element={<About lang={lang} />}></Route>
             <Route path="/team" element={<Team />}></Route>
           </Route>
+
+          <Route path="/accordion" element={<Accordion />}></Route>
+
 
           <Route path="/login" element={<Login />}></Route>
         </Routes>
